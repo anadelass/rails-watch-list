@@ -7,3 +7,27 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "cleaning database..."
+Bookmark.destroy_all
+Movie.destroy_all
+List.destroy_all
+
+puts "creating movies!!!!"
+Movie.create(
+  title: "Wonder Woman 1984",
+  overview: "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s",
+  rating: 6.9)
+Movie.create(
+  title: "The Shawshank Redemption",
+  overview: "Framed in the 1940s for double murder, upstanding banker Andy Dufresne begins a new life at the Shawshank prison",
+  rating: 8.7)
+Movie.create(
+  title: "Titanic",
+  overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.",
+  rating: 7.9)
+Movie.create(
+  title: "Ocean's Eight",
+  overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.",
+  rating: 7.0)
+
+puts "Finitoo"
